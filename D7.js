@@ -227,15 +227,27 @@ console.log("Numero totale di film:", movieCount);
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-
+function getMovieTitles(movies) {
+  return movies.map((movie) => movie.Title);
+}
+const movieTitles = getMovieTitles(movies);
+console.log("Titoli dei film:", movieTitles);
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
-
+function getMoviesFromCurrentMillennium(movies) {
+  return movies.filter((movie) => parseInt(movie.Year) >= 2000);
+}
+const currentMillenniumMovies = getMoviesFromCurrentMillennium(movies);
+console.log("Film usciti nel millennio corrente:", currentMillenniumMovies);
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-
+function getSumOfYears(movies) {
+  return movies.reduce((sum, movie) => sum + +movie.Year, 0);
+}
+const sumOfYears = getSumOfYears(movies);
+console.log("Somma di tutti gli anni di produzione:", sumOfYears);
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
