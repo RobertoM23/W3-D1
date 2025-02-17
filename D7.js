@@ -218,6 +218,11 @@ console.log("Il film più vecchio è:", oldest);
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+function getMovieCount(movies) {
+  return movies.length;
+}
+const movieCount = getMovieCount(movies);
+console.log("Numero totale di film:", movieCount);
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
